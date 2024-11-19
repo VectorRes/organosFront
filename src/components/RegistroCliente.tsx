@@ -41,7 +41,7 @@ const RegistroCliente = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:3000/cliente', {
+      const response = await fetch('https://esperanzaparatodos-czqcsc3f.b4a.run/cliente', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updatedFormData),

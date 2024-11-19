@@ -56,7 +56,7 @@ const DashboardCliente = () => {
     // Obtener los órganos disponibles
     const fetchOrganos = async () => {
       try {
-        const response = await fetch("http://localhost:3000/organos-disponibles", {
+        const response = await fetch("https://esperanzaparatodos-czqcsc3f.b4a.run/organos-disponibles", {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,

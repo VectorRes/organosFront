@@ -46,7 +46,7 @@ const DashboardProveedor = () => {
   useEffect(() => {
     const fetchOrganos = async () => {
       try {
-        const response = await fetch("http://localhost:3000/organos-disponibles", {
+        const response = await fetch("https://esperanzaparatodos-czqcsc3f.b4a.run/organos-disponibles", {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -82,7 +82,7 @@ const DashboardProveedor = () => {
   // Agregar nuevo órgano
   const handleAddOrgano = async () => {
     try {
-      const response = await fetch("http://localhost:3000/organos-disponibles", {
+      const response = await fetch("https://esperanzaparatodos-czqcsc3f.b4a.run/organos-disponibles", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -106,7 +106,7 @@ const DashboardProveedor = () => {
   // Agregar garantía al órgano seleccionado
   const handleAgregarGarantia = async (idOrgano: number) => {
     try {
-      const response = await fetch(`http://localhost:3000/organos-disponibles/${idOrgano}/garantia`, {
+      const response = await fetch(`https://esperanzaparatodos-czqcsc3f.b4a.run/organos-disponibles/${idOrgano}/garantia`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -125,7 +125,7 @@ const DashboardProveedor = () => {
       setSelectedOrgano(null);
 
       // Actualizar lista de órganos
-      const updatedOrganos = await fetch("http://localhost:3000/organos-disponibles", {
+      const updatedOrganos = await fetch("https://esperanzaparatodos-czqcsc3f.b4a.run/organos-disponibles", {
         headers: { Authorization: `Bearer ${token}` },
       }).then((res) => res.json());
 
@@ -139,7 +139,7 @@ const DashboardProveedor = () => {
   // Eliminar órgano
   const handleDeleteOrgano = async (idOrgano: number) => {
     try {
-      const response = await fetch(`http://localhost:3000/organos-disponibles/${idOrgano}`, {
+      const response = await fetch(`https://esperanzaparatodos-czqcsc3f.b4a.run/organos-disponibles/${idOrgano}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

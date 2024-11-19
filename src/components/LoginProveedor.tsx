@@ -19,7 +19,7 @@ export const LoginProveedor = () => {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:3000/proveedor/login", {
+      const response = await fetch("https://esperanzaparatodos-czqcsc3f.b4a.run/proveedor/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
